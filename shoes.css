@@ -1,0 +1,258 @@
+@font-face {
+    font-family: "DIN-Bold";
+    src: url("/assets/fonts/DIN-Bold.otf");
+}
+
+body {
+    background-color: linear-gradient(66.2deg, #f4f8fa 30.69%, #e8f3fa 80.61%);
+    display: flex;
+    height: 800px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 100px;
+
+    position: absolute;
+    width: 800px;
+    height: 626px;
+    left: calc(50% - 800px / 2);
+    top: calc(50% - 626px / 2 + 33px);
+}
+
+.tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+
+    position: relative;
+    width: 800px;
+    height: 50px;
+}
+
+.rod {
+    position: relative;
+    width: 800px;
+    height: 6px;
+}
+
+
+
+.title {
+    transition: opacity 0.2s ease-in-out;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 2px;
+    gap: 128px;
+
+    position: relative;
+    width: 800px;
+    height: 40px;
+}
+
+.titleList {
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.titleList:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.titleList.title-active {
+    opacity: 1;
+}
+
+.title-rod {
+    position: absolute;
+    transform: translate(42px, 0px);
+    width: 100px;
+    height: 6px;
+    /* left: 42px;
+    top: 0px; */
+
+    background: #6558ff;
+    border-radius: 3px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content {
+    position: absolute;
+    width: 800px;
+    height: 480px;
+    left: calc(50% - 800px / 2 + 8px);
+    top: 220px;
+}
+
+.img-box {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.img-box:hover {
+    rotate: 5deg;
+    transition: 0.3s ease-in-out;
+    transform: translate(0px, -4px);
+}
+
+.shoes-bg {
+    position: absolute;
+    width: 280px;
+    height: 340px;
+    left: calc(50% - 280px / 2);
+    top: 70px;
+    border-radius: 32px;
+    transition: 0.3s ease-in-out;
+}
+
+.shoes {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 0px;
+    top: -142px;
+}
+
+.NAM2021-bg {
+    background: url("/assets/img/Nike Air Max 2021.png") center no-repeat;
+    background-size: contain;
+    opacity: 0;
+}
+
+.NAM270-bg {
+    background: url("/assets/img/Nike Air Max 270.png") center no-repeat;
+    background-size: contain;
+    opacity: 0;
+}
+
+.NAM2022-bg {
+    background: url("/assets/img/Nike Air Max 2022.png") center no-repeat;
+    background-size: contain;
+    opacity: 0;
+}
+
+.img-box.img-selected {
+    opacity: 1;
+    z-index: 10;
+}
+
+.intro {
+    position: absolute;
+    width: 108px;
+    height: 26px;
+    left: 24px;
+    top: 232px;
+    font-family: "DINPro";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height */
+    color: #000000;
+}
+
+.price {
+    position: absolute;
+    width: 95px;
+    height: 52px;
+    left: 24px;
+    top: 266px;
+
+    font-family: "DINPro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: -0.05em;
+    /* identical to box height */
+
+    letter-spacing: 0.04em;
+
+    color: #000000;
+}
+
+.color-bg {
+    position: absolute;
+    width: 280px;
+    height: 340px;
+    border-radius: 32px;
+    left: 0px;
+    top: 0px;
+}
+
+.colorList.color-selected {
+    opacity: 1;
+    z-index: 0;
+
+}
+
+.NAM2021-color {
+    position: absolute;
+    width: 280px;
+    height: 340px;
+
+    left: 0px;
+    top: 0px;
+    border-radius: 32px;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(37.7deg,
+            #f0dfff 16.6%,
+            rgba(55, 171, 255, 0.09) 80.36%);
+    opacity: 0;
+    z-index: -1
+}
+
+.NAM270-color {
+    position: absolute;
+    width: 280px;
+    height: 340px;
+
+    left: 0px;
+    top: 0px;
+    border-radius: 32px;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(36.73deg, #EA2D2D 7.55%, rgba(254, 203, 156, 0.09) 80.27%);
+    opacity: 0;
+    z-index: -1
+}
+
+
+.NAM2022-color {
+    position: absolute;
+    width: 280px;
+    height: 340px;
+    left: 0px;
+    top: 0px;
+    border-radius: 32px;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(37.7deg, #FFE39C 16.6%, rgba(237, 248, 255, 0.09) 80.36%);
+    opacity: 0;
+    z-index: -1
+}
+
+
+.shoes-bg:hover {
+
+    box-shadow: 0px 24px 32px rgba(43, 37, 107, 0.05);
+    transition: 0.3s ease-in-out;
+}
